@@ -2,20 +2,18 @@
 
 # Configuration
 declare -A PATH_CONFIG
-#PATH_CONFIG["/var/www/aia/storage/logs"]="/var/app_logs/aia"
-PATH_CONFIG["/var/www/bima/storage/logs"]="/var/app_logs/bima"
-PATH_CONFIG["/var/www/ceylincolife/storage/logs"]="/var/app_logs/ceylincolife"
-PATH_CONFIG["/var/www/janashakthi/storage/logs"]="/var/app_logs/janashakthi"
-PATH_CONFIG["/var/www/lolc/storage/logs"]="/var/app_logs/lolc"
-PATH_CONFIG["/var/www/directPayBackend/app/logs"]="/var/app_logs/directPayBackend"
-#PATH_CONFIG["/var/www/ipg-backend/storage/logs"]="/var/app_logs/ipg-backend"
+#PATH_CONFIG["/path/path/path/logs"]="/path/path_logs/file1"
+PATH_CONFIG["/path/path/path1/logs"]="/path/path_logs/file2"
+PATH_CONFIG["/path/path/path2/logs"]="/path/path_logs/file3"
+PATH_CONFIG["/path/path/path3/logs"]="/path/path_logs/file4"
+PATH_CONFIG["/path/path/path4/logs"]="/path/path_logs/file5"
+#PATH_CONFIG["/path/path/path5/logs"]="/path/path_logs/file6"
 
-# Prefixes to match (add more as needed)
-PREFIXES=("laravel" "info" "externalApi" "fileUpload")
+# Prefixes in log to match 
+PREFIXES=("log_type_1" "log_type_2" "log_type_3" "log_type_4")
 
 # Get the current month and calculate the previous three months
 CURRENT_MONTH=$(date +%Y-%m)
-#CURRENT_MONTH=2024-10
 THREE_MONTHS_AGO=$(date -d "$CURRENT_MONTH-01 -3 months" +%Y-%m)
 
 echo "Current month: $CURRENT_MONTH"
